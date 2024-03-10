@@ -33,6 +33,11 @@ RSpec.describe "kata.rb" do
       expect(kata.sum).to eq("invalid input")
     end
 
+    it "should return error if input numbers is not assigned" do
+      kata = Kata.new
+      expect(kata.sum).to eq("input is blank")
+    end
+
     it "should return error when input contains negative number" do
       kata = Kata.new
       kata.numbers = "1;-2"
